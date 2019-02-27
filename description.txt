@@ -1,0 +1,9 @@
+*OZF_task1.py* - python script makes a prediction image is a document scan either a selfie.
+
+*model* - directory storing parameters of model. *OZF_task1.py* knows her path as './model'.
+
+Standart input args:
+*input_dir* - directory storing unclassified images.
+*selfie_dir* - directory to put images classified as a selfie
+*scan_dir* - directory to put images classified as a document scan
+*exc_dir* - directory to put images processed with exceptions
