@@ -105,9 +105,9 @@ def makepredictions(input_dir,selfie_dir,scan_dir,exc_dir):
                 prediction = image_prediction.eval({tf_image : [img]})[0]
                 prediction = np.argmax(prediction)
                 if prediction:
-                    cv2.imwrite(selfie_dir+'/'+file,img)
+                    copyfile(input_dir+'/'+file,selfie_dir+'/'+file)
                 else:
-                    cv2.imwrite(scan_dir+'/'+file,img)
+                    copyfile(input_dir+'/'+file,scan_dir+'/'+file)
             except Exception:
                 copyfile(input_dir+'/'+file,exc_dir+'/'+file)
 
